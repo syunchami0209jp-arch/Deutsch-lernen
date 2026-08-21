@@ -158,17 +158,90 @@ function pluralOptions(q){
 }
 function showResult(q,ok,answer){$("result").innerHTML=ok?`⭕ 正解！<br>${q.explanation}`:`❌ 不正解。正解は <b>${answer}</b> です。<br>${q.explanation}`}
 
+
+function replaceBlank(text,blank){
+  if(!blank)return text;
+  const escaped=blank.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+  return text.replace(new RegExp(escaped,"i"),"_____");
+}
+
+function typingHint(text){
+  const words=(text||"").trim().split(/\s+/).filter(Boolean);
+  return words.map(word=>{
+    const m=word.match(/[\p{L}\p{N}]/u);
+    if(!m)return word;
+    let hint=m[0];
+    const trailing=word.match(/[.!?,;:]+$/);
+    if(trailing)hint+=trailing[0];
+    return hint;
+  }).join(" ");
+}
+
+function insertSpecialChar(ch){
+  const input=$("answerInput");
+  if(!input||input.disabled)return;
+  const start=input.selectionStart??input.value.length;
+  const end=input.selectionEnd??input.value.length;
+  input.value=input.value.slice(0,start)+ch+input.value.slice(end);
+  const pos=start+ch.length;
+  input.focus();
+  input.setSelectionRange(pos,pos);
+}
+
+function renderSpecialKeys(){
+  return `<div class="special-keys" aria-label="ドイツ語特殊文字">
+    <span class="special-label">特殊文字</span>
+    ${["ä","ö","ü","ß","Ä","Ö","Ü"].map(ch=>`<button type="button" class="special-key" data-char="${ch}">${ch}</button>`).join("")}
+  </div>`;
+}
+
+function bindSpecialKeys(){
+  document.querySelectorAll(".special-key").forEach(b=>{
+    b.onclick=()=>insertSpecialChar(b.dataset.char);
+  });
+}
+
 function renderBlank(){
  let q=questions[index],blank=q.blank;progress();
- $("practice-content").innerHTML=`<h2>例文4択穴埋め</h2><div class="example">${q.example.replace(blank,"_____")}</div><p class="translation-small">${q.translation}</p><div id="options"></div><div class="result-area" id="result"></div><div class="action-area"><button class="primary hidden" id="next">次の問題</button></div>`;
+ $("practice-content").innerHTML=`<h2>例文4択穴埋め</h2><div class="example">${replaceBlank(q.example,blank)}</div><p class="translation-small">${q.translation}</p><div id="options"></div><div class="result-area" id="result"></div><div class="action-area"><button class="primary hidden" id="next">次の問題</button></div>`;
  options(q).forEach(o=>{let b=document.createElement("button");b.className="option";b.textContent=o;b.onclick=()=>{let ok=o===blank;mark(q,ok);showResult(q,ok,blank);$("options").querySelectorAll("button").forEach(x=>x.disabled=true);$("next").classList.remove("hidden");$("next").focus()};$("options").appendChild(b)});$("next").onclick=next
 }
 function renderTyping(){
- let q=questions[index],blank=q.blank;progress();
- $("practice-content").innerHTML=`<h2>例文タイピング</h2><div class="example">${q.example.replace(blank,"_____")}</div><p class="translation-small">${q.translation}</p><input id="answerInput" autocomplete="off" placeholder="空欄に入るドイツ語"><div class="action-area"><button class="primary" id="check">回答する</button><button class="primary hidden" id="next">次の問題</button></div><div class="result-area" id="result"></div>`;
- $("answerInput").focus();
- $("check").onclick=()=>{if($("check").dataset.done)return;let v=$("answerInput").value.trim().toLowerCase().replace(/\s+/g," "),ok=v===blank.toLowerCase();mark(q,ok);showResult(q,ok,blank);$("answerInput").disabled=true;$("check").dataset.done="1";$("check").classList.add("hidden");$("next").classList.remove("hidden");$("next").focus()};
- $("next").onclick=next
+  let q=questions[index],blank=q.blank;progress();
+  const isConversation=currentCategory&&currentCategory.id==="conversation";
+  const hint=isConversation?typingHint(blank):"";
+  const hintHtml=isConversation
+    ?`<div class="typing-hint"><b>ヒント：</b>${blank.split(/\s+/).filter(Boolean).length}語　${hint}</div>`
+    :"";
+  $("practice-content").innerHTML=`
+    <h2>例文タイピング</h2>
+    <div class="example">${replaceBlank(q.example,blank)}</div>
+    <p class="translation-small">${q.translation}</p>
+    ${hintHtml}
+    <input id="answerInput" autocomplete="off" placeholder="空欄に入るドイツ語">
+    ${renderSpecialKeys()}
+    <div class="action-area">
+      <button class="primary" id="check">回答する</button>
+      <button class="primary hidden" id="next">次の問題</button>
+    </div>
+    <div class="result-area" id="result"></div>`;
+  bindSpecialKeys();
+  $("answerInput").focus();
+
+  $("check").onclick=()=>{
+    if($("check").dataset.done)return;
+    const v=$("answerInput").value.trim().replace(/\s+/g," ");
+    $("answerInput").disabled=true;
+    $("check").dataset.done="1";
+    $("check").classList.add("hidden");
+
+    const ok=v.toLowerCase()===blank.toLowerCase();
+    mark(q,ok);
+    showResult(q,ok,blank);
+    $("next").classList.remove("hidden");
+    $("next").focus();
+  };
+  $("next").onclick=next
 }
 function renderGender(){
  let q=questions[index],noun=q.german.replace(/^(der|die|das)\s+/i,"");progress();
