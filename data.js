@@ -407,6 +407,32 @@ const lessons = [
         ]
       },
       {
+        "id": "preposition",
+        "title": "前置詞",
+        "items": [
+          {
+            "id": "l1-009",
+            "kind": "other",
+            "german": "bei",
+            "japanese": "～で、～のところで",
+            "example": "Willkommen bei uns!",
+            "blank": "bei",
+            "translation": "私たちのところへようこそ！",
+            "explanation": "bei は「～のところで／～のところへ」などを表す前置詞です。"
+          },
+          {
+            "id": "l1-030",
+            "kind": "other",
+            "german": "aus",
+            "japanese": "～から、～出身の",
+            "example": "Ich komme aus Japan.",
+            "blank": "aus",
+            "translation": "私は日本出身です。",
+            "explanation": "aus は出身・起点を表す前置詞です。"
+          }
+        ]
+      },
+      {
         "id": "other",
         "title": "その他",
         "items": [
@@ -419,16 +445,6 @@ const lessons = [
             "blank": "Willkommen",
             "translation": "私たちの授業へようこそ！",
             "explanation": "人を歓迎するときに使います。"
-          },
-          {
-            "id": "l1-009",
-            "kind": "other",
-            "german": "bei",
-            "japanese": "～で、～のところで",
-            "example": "Willkommen bei uns!",
-            "blank": "bei",
-            "translation": "私たちのところへようこそ！",
-            "explanation": "bei は「～のところで／～のところへ」などを表す前置詞です。"
           },
           {
             "id": "l1-014",
@@ -499,16 +515,6 @@ const lessons = [
             "blank": "Woher",
             "translation": "あなたはどこから来ましたか？",
             "explanation": "woher は出身・起点を尋ねる疑問詞です。"
-          },
-          {
-            "id": "l1-030",
-            "kind": "other",
-            "german": "aus",
-            "japanese": "～から、～出身の",
-            "example": "Ich komme aus Japan.",
-            "blank": "aus",
-            "translation": "私は日本出身です。",
-            "explanation": "aus は出身・起点を表す前置詞です。"
           },
           {
             "id": "l1-034",
@@ -1803,6 +1809,294 @@ const lessons = [
         ]
       },
       {
+        "id": "numeral",
+        "title": "数詞",
+        "items": [
+          {
+            "id": "l2-num00",
+            "kind": "numeral",
+            "german": "null",
+            "japanese": "0",
+            "example": "Null ist eine Zahl.",
+            "blank": "null",
+            "translation": "0は数字です。",
+            "explanation": "null は数詞の「0」です。名詞の die Null（ゼロ）とは区別できます。"
+          },
+          {
+            "id": "l2-num01",
+            "kind": "numeral",
+            "german": "eins",
+            "japanese": "1",
+            "example": "Eins Jahre alt.",
+            "blank": "eins",
+            "translation": "1歳です。",
+            "explanation": "eins は数字の1です。"
+          },
+          {
+            "id": "l2-num02",
+            "kind": "numeral",
+            "german": "zwei",
+            "japanese": "2",
+            "example": "Zwei Jahre alt.",
+            "blank": "zwei",
+            "translation": "2歳です。",
+            "explanation": "zwei は数字の2です。"
+          },
+          {
+            "id": "l2-num03",
+            "kind": "numeral",
+            "german": "drei",
+            "japanese": "3",
+            "example": "Drei Jahre alt.",
+            "blank": "drei",
+            "translation": "3歳です。",
+            "explanation": "drei は数字の3です。"
+          },
+          {
+            "id": "l2-num04",
+            "kind": "numeral",
+            "german": "vier",
+            "japanese": "4",
+            "example": "Vier Jahre alt.",
+            "blank": "vier",
+            "translation": "4歳です。",
+            "explanation": "vier は数字の4です。"
+          },
+          {
+            "id": "l2-num05",
+            "kind": "numeral",
+            "german": "fünf",
+            "japanese": "5",
+            "example": "Fünf Jahre alt.",
+            "blank": "fünf",
+            "translation": "5歳です。",
+            "explanation": "fünf は数字の5です。"
+          },
+          {
+            "id": "l2-num06",
+            "kind": "numeral",
+            "german": "sechs",
+            "japanese": "6",
+            "example": "Sechs Jahre alt.",
+            "blank": "sechs",
+            "translation": "6歳です。",
+            "explanation": "sechs は数字の6です。"
+          },
+          {
+            "id": "l2-num07",
+            "kind": "numeral",
+            "german": "sieben",
+            "japanese": "7",
+            "example": "Sieben Jahre alt.",
+            "blank": "sieben",
+            "translation": "7歳です。",
+            "explanation": "sieben は数字の7です。"
+          },
+          {
+            "id": "l2-num08",
+            "kind": "numeral",
+            "german": "acht",
+            "japanese": "8",
+            "example": "Acht Jahre alt.",
+            "blank": "acht",
+            "translation": "8歳です。",
+            "explanation": "acht は数字の8です。"
+          },
+          {
+            "id": "l2-num09",
+            "kind": "numeral",
+            "german": "neun",
+            "japanese": "9",
+            "example": "Neun Jahre alt.",
+            "blank": "neun",
+            "translation": "9歳です。",
+            "explanation": "neun は数字の9です。"
+          },
+          {
+            "id": "l2-num10",
+            "kind": "numeral",
+            "german": "zehn",
+            "japanese": "10",
+            "example": "Zehn Jahre alt.",
+            "blank": "zehn",
+            "translation": "10歳です。",
+            "explanation": "zehn は数字の10です。"
+          },
+          {
+            "id": "l2-num11",
+            "kind": "numeral",
+            "german": "elf",
+            "japanese": "11",
+            "example": "Elf Jahre alt.",
+            "blank": "elf",
+            "translation": "11歳です。",
+            "explanation": "elf は数字の11です。"
+          },
+          {
+            "id": "l2-num12",
+            "kind": "numeral",
+            "german": "zwölf",
+            "japanese": "12",
+            "example": "Zwölf Jahre alt.",
+            "blank": "zwölf",
+            "translation": "12歳です。",
+            "explanation": "zwölf は数字の12です。"
+          },
+          {
+            "id": "l2-num13",
+            "kind": "numeral",
+            "german": "dreizehn",
+            "japanese": "13",
+            "example": "Dreizehn Jahre alt.",
+            "blank": "dreizehn",
+            "translation": "13歳です。",
+            "explanation": "dreizehn は数字の13です。"
+          },
+          {
+            "id": "l2-num14",
+            "kind": "numeral",
+            "german": "vierzehn",
+            "japanese": "14",
+            "example": "Vierzehn Jahre alt.",
+            "blank": "vierzehn",
+            "translation": "14歳です。",
+            "explanation": "vierzehn は数字の14です。"
+          },
+          {
+            "id": "l2-num15",
+            "kind": "numeral",
+            "german": "fünfzehn",
+            "japanese": "15",
+            "example": "Fünfzehn Jahre alt.",
+            "blank": "fünfzehn",
+            "translation": "15歳です。",
+            "explanation": "fünfzehn は数字の15です。"
+          },
+          {
+            "id": "l2-num16",
+            "kind": "numeral",
+            "german": "sechzehn",
+            "japanese": "16",
+            "example": "Sechzehn Jahre alt.",
+            "blank": "sechzehn",
+            "translation": "16歳です。",
+            "explanation": "sechzehn は数字の16です。"
+          },
+          {
+            "id": "l2-num17",
+            "kind": "numeral",
+            "german": "siebzehn",
+            "japanese": "17",
+            "example": "Siebzehn Jahre alt.",
+            "blank": "siebzehn",
+            "translation": "17歳です。",
+            "explanation": "siebzehn は数字の17です。"
+          },
+          {
+            "id": "l2-num18",
+            "kind": "numeral",
+            "german": "achtzehn",
+            "japanese": "18",
+            "example": "Achtzehn Jahre alt.",
+            "blank": "achtzehn",
+            "translation": "18歳です。",
+            "explanation": "achtzehn は数字の18です。"
+          },
+          {
+            "id": "l2-num19",
+            "kind": "numeral",
+            "german": "neunzehn",
+            "japanese": "19",
+            "example": "Neunzehn Jahre alt.",
+            "blank": "neunzehn",
+            "translation": "19歳です。",
+            "explanation": "neunzehn は数字の19です。"
+          },
+          {
+            "id": "l2-num20",
+            "kind": "numeral",
+            "german": "zwanzig",
+            "japanese": "20",
+            "example": "Zwanzig Jahre alt.",
+            "blank": "zwanzig",
+            "translation": "20歳です。",
+            "explanation": "zwanzig は数字の20です。"
+          }
+        ]
+      },
+      {
+        "id": "preposition",
+        "title": "前置詞",
+        "items": [
+          {
+            "id": "l2-o02",
+            "kind": "other",
+            "german": "in",
+            "japanese": "～に、～で",
+            "example": "Ich wohne in Hamburg.",
+            "blank": "in",
+            "translation": "私はハンブルクに住んでいます。",
+            "explanation": "in は場所を表す前置詞です。"
+          },
+          {
+            "id": "l2-o21",
+            "kind": "other",
+            "german": "von",
+            "japanese": "～の、～から",
+            "example": "Ich komme von der Arbeit.",
+            "blank": "von",
+            "translation": "私は仕事から来ます。",
+            "explanation": "von は「～から」「～の」などを表す前置詞です。"
+          },
+          {
+            "id": "l2-o22",
+            "kind": "other",
+            "german": "bei",
+            "japanese": "～のところで、～に勤めて",
+            "example": "Ich bin bei der Polizei.",
+            "blank": "bei",
+            "translation": "私は警察に勤めています。",
+            "explanation": "bei は組織などとの関係や、そこで働くことを表せます。"
+          },
+          {
+            "id": "l2-o24",
+            "kind": "other",
+            "german": "aus",
+            "japanese": "～から、～出身の",
+            "example": "Ich komme aus Kiel.",
+            "blank": "aus",
+            "translation": "私はキール出身です。",
+            "explanation": "aus は出身地や起点を表します。"
+          }
+        ]
+      },
+      {
+        "id": "conjunction",
+        "title": "接続詞",
+        "items": [
+          {
+            "id": "l2-o17",
+            "kind": "other",
+            "german": "aber",
+            "japanese": "しかし、でも",
+            "example": "Ich komme aus Kiel, aber ich lebe in Heidelberg.",
+            "blank": "aber",
+            "translation": "私はキール出身ですが、ハイデルベルクに住んでいます。",
+            "explanation": "aber は逆接を表します。"
+          },
+          {
+            "id": "l2-conj01",
+            "kind": "conjunction",
+            "german": "und",
+            "japanese": "そして、～と",
+            "example": "Hamburg und Kiel liegen in Norddeutschland.",
+            "blank": "und",
+            "translation": "ハンブルクとキールは北ドイツにあります。",
+            "explanation": "und は語や文をつなぐ基本的な接続詞です。"
+          }
+        ]
+      },
+      {
         "id": "other",
         "title": "その他",
         "items": [
@@ -1815,16 +2109,6 @@ const lessons = [
             "blank": "auch",
             "translation": "ティムもドイツ語を勉強します。",
             "explanation": "auch は「～も」という意味です。"
-          },
-          {
-            "id": "l2-o02",
-            "kind": "other",
-            "german": "in",
-            "japanese": "～に、～で",
-            "example": "Ich wohne in Hamburg.",
-            "blank": "in",
-            "translation": "私はハンブルクに住んでいます。",
-            "explanation": "in は場所を表す前置詞です。"
           },
           {
             "id": "l2-o03",
@@ -1967,16 +2251,6 @@ const lessons = [
             "explanation": "hier は「ここ」を表す副詞です。"
           },
           {
-            "id": "l2-o17",
-            "kind": "other",
-            "german": "aber",
-            "japanese": "しかし、でも",
-            "example": "Ich komme aus Kiel, aber ich lebe in Heidelberg.",
-            "blank": "aber",
-            "translation": "私はキール出身ですが、ハイデルベルクに住んでいます。",
-            "explanation": "aber は逆接を表します。"
-          },
-          {
             "id": "l2-o18",
             "kind": "other",
             "german": "schon",
@@ -2007,26 +2281,6 @@ const lessons = [
             "explanation": "zurzeit は「現在、今のところ」という副詞です。"
           },
           {
-            "id": "l2-o21",
-            "kind": "other",
-            "german": "von",
-            "japanese": "～の、～から",
-            "example": "Ich komme von der Arbeit.",
-            "blank": "von",
-            "translation": "私は仕事から来ます。",
-            "explanation": "von は「～から」「～の」などを表す前置詞です。"
-          },
-          {
-            "id": "l2-o22",
-            "kind": "other",
-            "german": "bei",
-            "japanese": "～のところで、～に勤めて",
-            "example": "Ich bin bei der Polizei.",
-            "blank": "bei",
-            "translation": "私は警察に勤めています。",
-            "explanation": "bei は組織などとの関係や、そこで働くことを表せます。"
-          },
-          {
             "id": "l2-o23",
             "kind": "other",
             "german": "nicht",
@@ -2035,216 +2289,6 @@ const lessons = [
             "blank": "nicht",
             "translation": "ララの両親は一緒に暮らしていません。",
             "explanation": "nicht は否定を表します。"
-          },
-          {
-            "id": "l2-o24",
-            "kind": "other",
-            "german": "aus",
-            "japanese": "～から、～出身の",
-            "example": "Ich komme aus Kiel.",
-            "blank": "aus",
-            "translation": "私はキール出身です。",
-            "explanation": "aus は出身地や起点を表します。"
-          },
-          {
-            "id": "l2-num01",
-            "kind": "other",
-            "german": "eins",
-            "japanese": "1",
-            "example": "Eins Jahre alt.",
-            "blank": "eins",
-            "translation": "1歳です。",
-            "explanation": "eins は数字の1です。"
-          },
-          {
-            "id": "l2-num02",
-            "kind": "other",
-            "german": "zwei",
-            "japanese": "2",
-            "example": "Zwei Jahre alt.",
-            "blank": "zwei",
-            "translation": "2歳です。",
-            "explanation": "zwei は数字の2です。"
-          },
-          {
-            "id": "l2-num03",
-            "kind": "other",
-            "german": "drei",
-            "japanese": "3",
-            "example": "Drei Jahre alt.",
-            "blank": "drei",
-            "translation": "3歳です。",
-            "explanation": "drei は数字の3です。"
-          },
-          {
-            "id": "l2-num04",
-            "kind": "other",
-            "german": "vier",
-            "japanese": "4",
-            "example": "Vier Jahre alt.",
-            "blank": "vier",
-            "translation": "4歳です。",
-            "explanation": "vier は数字の4です。"
-          },
-          {
-            "id": "l2-num05",
-            "kind": "other",
-            "german": "fünf",
-            "japanese": "5",
-            "example": "Fünf Jahre alt.",
-            "blank": "fünf",
-            "translation": "5歳です。",
-            "explanation": "fünf は数字の5です。"
-          },
-          {
-            "id": "l2-num06",
-            "kind": "other",
-            "german": "sechs",
-            "japanese": "6",
-            "example": "Sechs Jahre alt.",
-            "blank": "sechs",
-            "translation": "6歳です。",
-            "explanation": "sechs は数字の6です。"
-          },
-          {
-            "id": "l2-num07",
-            "kind": "other",
-            "german": "sieben",
-            "japanese": "7",
-            "example": "Sieben Jahre alt.",
-            "blank": "sieben",
-            "translation": "7歳です。",
-            "explanation": "sieben は数字の7です。"
-          },
-          {
-            "id": "l2-num08",
-            "kind": "other",
-            "german": "acht",
-            "japanese": "8",
-            "example": "Acht Jahre alt.",
-            "blank": "acht",
-            "translation": "8歳です。",
-            "explanation": "acht は数字の8です。"
-          },
-          {
-            "id": "l2-num09",
-            "kind": "other",
-            "german": "neun",
-            "japanese": "9",
-            "example": "Neun Jahre alt.",
-            "blank": "neun",
-            "translation": "9歳です。",
-            "explanation": "neun は数字の9です。"
-          },
-          {
-            "id": "l2-num10",
-            "kind": "other",
-            "german": "zehn",
-            "japanese": "10",
-            "example": "Zehn Jahre alt.",
-            "blank": "zehn",
-            "translation": "10歳です。",
-            "explanation": "zehn は数字の10です。"
-          },
-          {
-            "id": "l2-num11",
-            "kind": "other",
-            "german": "elf",
-            "japanese": "11",
-            "example": "Elf Jahre alt.",
-            "blank": "elf",
-            "translation": "11歳です。",
-            "explanation": "elf は数字の11です。"
-          },
-          {
-            "id": "l2-num12",
-            "kind": "other",
-            "german": "zwölf",
-            "japanese": "12",
-            "example": "Zwölf Jahre alt.",
-            "blank": "zwölf",
-            "translation": "12歳です。",
-            "explanation": "zwölf は数字の12です。"
-          },
-          {
-            "id": "l2-num13",
-            "kind": "other",
-            "german": "dreizehn",
-            "japanese": "13",
-            "example": "Dreizehn Jahre alt.",
-            "blank": "dreizehn",
-            "translation": "13歳です。",
-            "explanation": "dreizehn は数字の13です。"
-          },
-          {
-            "id": "l2-num14",
-            "kind": "other",
-            "german": "vierzehn",
-            "japanese": "14",
-            "example": "Vierzehn Jahre alt.",
-            "blank": "vierzehn",
-            "translation": "14歳です。",
-            "explanation": "vierzehn は数字の14です。"
-          },
-          {
-            "id": "l2-num15",
-            "kind": "other",
-            "german": "fünfzehn",
-            "japanese": "15",
-            "example": "Fünfzehn Jahre alt.",
-            "blank": "fünfzehn",
-            "translation": "15歳です。",
-            "explanation": "fünfzehn は数字の15です。"
-          },
-          {
-            "id": "l2-num16",
-            "kind": "other",
-            "german": "sechzehn",
-            "japanese": "16",
-            "example": "Sechzehn Jahre alt.",
-            "blank": "sechzehn",
-            "translation": "16歳です。",
-            "explanation": "sechzehn は数字の16です。"
-          },
-          {
-            "id": "l2-num17",
-            "kind": "other",
-            "german": "siebzehn",
-            "japanese": "17",
-            "example": "Siebzehn Jahre alt.",
-            "blank": "siebzehn",
-            "translation": "17歳です。",
-            "explanation": "siebzehn は数字の17です。"
-          },
-          {
-            "id": "l2-num18",
-            "kind": "other",
-            "german": "achtzehn",
-            "japanese": "18",
-            "example": "Achtzehn Jahre alt.",
-            "blank": "achtzehn",
-            "translation": "18歳です。",
-            "explanation": "achtzehn は数字の18です。"
-          },
-          {
-            "id": "l2-num19",
-            "kind": "other",
-            "german": "neunzehn",
-            "japanese": "19",
-            "example": "Neunzehn Jahre alt.",
-            "blank": "neunzehn",
-            "translation": "19歳です。",
-            "explanation": "neunzehn は数字の19です。"
-          },
-          {
-            "id": "l2-num20",
-            "kind": "other",
-            "german": "zwanzig",
-            "japanese": "20",
-            "example": "Zwanzig Jahre alt.",
-            "blank": "zwanzig",
-            "translation": "20歳です。",
-            "explanation": "zwanzig は数字の20です。"
           }
         ]
       }
