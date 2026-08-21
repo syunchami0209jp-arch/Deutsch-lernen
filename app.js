@@ -165,15 +165,16 @@ function replaceBlank(text,blank){
   return text.replace(new RegExp(escaped,"i"),"_____");
 }
 
-function typingHint(text){
+function typingBlankHint(text){
   const words=(text||"").trim().split(/\s+/).filter(Boolean);
   return words.map(word=>{
-    const m=word.match(/[\p{L}\p{N}]/u);
-    if(!m)return word;
-    let hint=m[0];
-    const trailing=word.match(/[.!?,;:]+$/);
-    if(trailing)hint+=trailing[0];
-    return hint;
+    const chars=[...word];
+    const firstIndex=chars.findIndex(ch=>/[\p{L}\p{N}]/u.test(ch));
+    if(firstIndex<0)return word;
+    const first=chars[firstIndex];
+    const restCount=Math.max(0,chars.length-firstIndex-1);
+    const punctuation=chars.slice(firstIndex+1).filter(ch=>/[.!?,;:]/u.test(ch)).join("");
+    return first+"_" .repeat(restCount-punctuation.length)+punctuation;
   }).join(" ");
 }
 
@@ -209,13 +210,12 @@ function renderBlank(){
 function renderTyping(){
   let q=questions[index],blank=q.blank;progress();
   const isConversation=currentCategory&&currentCategory.id==="conversation";
-  const hint=isConversation?typingHint(blank):"";
   const hintHtml=isConversation
-    ?`<div class="typing-hint"><b>ヒント：</b>${blank.split(/\s+/).filter(Boolean).length}語　${hint}</div>`
+    ?`<div class="typing-blank-hint">${typingBlankHint(blank)}</div>`
     :"";
   $("practice-content").innerHTML=`
     <h2>例文タイピング</h2>
-    <div class="example">${replaceBlank(q.example,blank)}</div>
+    <div class="example">${isConversation ? replaceBlank(q.example,blank) : replaceBlank(q.example,blank)}</div>
     <p class="translation-small">${q.translation}</p>
     ${hintHtml}
     <input id="answerInput" autocomplete="off" placeholder="空欄に入るドイツ語">
