@@ -178,6 +178,12 @@ function typingBlankHint(text){
   }).join(" ");
 }
 
+function replaceTypingBlank(text,blank){
+  if(!blank)return text;
+  const escaped=blank.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+  return text.replace(new RegExp(escaped,"i"),`<span class="typing-inline-hint">${typingBlankHint(blank)}</span>`);
+}
+
 function insertSpecialChar(ch){
   const input=$("answerInput");
   if(!input||input.disabled)return;
@@ -210,14 +216,13 @@ function renderBlank(){
 function renderTyping(){
   let q=questions[index],blank=q.blank;progress();
   const isConversation=currentCategory&&currentCategory.id==="conversation";
-  const hintHtml=isConversation
-    ?`<div class="typing-blank-hint">${typingBlankHint(blank)}</div>`
-    :"";
+  const exampleHtml=isConversation
+    ?replaceTypingBlank(q.example,blank)
+    :replaceBlank(q.example,blank);
   $("practice-content").innerHTML=`
     <h2>例文タイピング</h2>
-    <div class="example">${isConversation ? replaceBlank(q.example,blank) : replaceBlank(q.example,blank)}</div>
+    <div class="example">${exampleHtml}</div>
     <p class="translation-small">${q.translation}</p>
-    ${hintHtml}
     <input id="answerInput" autocomplete="off" placeholder="空欄に入るドイツ語">
     ${renderSpecialKeys()}
     <div class="action-area">
