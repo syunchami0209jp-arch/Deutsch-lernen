@@ -20,12 +20,21 @@ function loadWrongMap(){
 function saveWrong(){localStorage.setItem("deutschQuestWrong",JSON.stringify(wrongMap))}
 function saveFavorites(){localStorage.setItem("deutschQuestFavorites",JSON.stringify([...favoriteIds]))}
 function show(id){document.querySelectorAll(".screen").forEach(x=>x.classList.add("hidden"));$(id).classList.remove("hidden")}
-function goHome(){renderLessons();show("home")}
+function goHome(){show("home")}
 
 function allItems(){return lessons.flatMap(l=>l.categories.flatMap(c=>c.items))}
 function getItemById(id){return allItems().find(q=>q.id===id)}
 function wrongCount(){return Object.keys(wrongMap).filter(id=>Array.isArray(wrongMap[id])&&wrongMap[id].length>0).length}
 function favoriteCount(){return favoriteIds.size}
+
+function goVocabulary(){
+  renderLessons();
+  show("vocab");
+}
+
+function openVocabulary(){
+  goVocabulary();
+}
 
 function renderLessons(){
  const box=$("lesson-buttons");box.innerHTML="";
@@ -328,4 +337,4 @@ document.addEventListener("keydown",e=>{
  }
  const nextBtn=$("next");if(nextBtn&&!nextBtn.classList.contains("hidden")){e.preventDefault();nextBtn.click()}
 });
-$("practice-back").onclick=renderPracticeMenu;renderLessons();
+$("practice-back").onclick=renderPracticeMenu;renderLessons();show("home");
