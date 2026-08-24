@@ -1,22 +1,53 @@
-body{font-family:system-ui,-apple-system,sans-serif;background:#f5f7f4;margin:0;color:#222}.container{max-width:760px;margin:auto;padding:24px}.screen{min-height:80vh}.hidden{display:none!important}button{border:0;border-radius:12px;padding:14px 18px;margin:7px 0;font-size:16px;cursor:pointer;background:#e6e9e7}.primary{display:block;width:100%;background:#3d7c52;color:white;font-weight:700}.secondary-action{display:block;width:100%;background:#e6e9e7;font-weight:700}.option{display:block;width:100%;text-align:left;background:white;border:1px solid #ddd}.card,.example,.answer{background:white;border-radius:16px;padding:22px;margin:16px 0;box-shadow:0 2px 10px #00000010}.german{font-size:30px;font-weight:700;text-align:center}.translation{font-size:24px;font-weight:700}.example{font-size:24px;line-height:1.7}.small,.translation-small,.note{color:#666}.score{font-size:28px;font-weight:700}input{width:100%;box-sizing:border-box;padding:14px;border:1px solid #bbb;border-radius:10px;font-size:18px;margin:8px 0}.tag{display:inline-block;padding:4px 8px;margin-right:6px;border-radius:8px;background:#eef2ee}.action-area{min-height:54px;margin:8px 0}.result-area{min-height:72px;margin:12px 0;line-height:1.7}.question-context{padding:10px 14px;background:#f0f5f1;border-left:4px solid #3d7c52;border-radius:8px}.card-action{margin-top:8px}.card-word-with-star{position:relative}.favorite-button{display:block;margin:0 0 10px auto;background:#f1f3f1;padding:9px 13px;border-radius:10px;font-size:14px}.favorite-button.favorite-on{background:#fff2b8}.wrong-summary{margin:22px 0}.wrong-item{padding:14px 0;border-top:1px solid #ddd}.wrong-item:last-child{border-bottom:1px solid #ddd}.wrong-german{font-size:21px;font-weight:700;margin-bottom:5px}.dictionary-item{display:flex;justify-content:space-between;align-items:center;gap:10px;background:white;border-radius:12px;padding:12px 14px;margin:8px 0;border:1px solid #ddd}.remove-favorite{margin:0;padding:7px 10px;background:#fff2b8}.favorite-on{background:#fff2b8}
-.special-keys{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:6px 0 10px}
-.special-label{font-size:14px;color:#666;margin-right:4px}
-.special-key{margin:0;padding:8px 12px;font-size:16px;background:#eef2ee;border:1px solid #d5dbd6}
-.special-key:hover{background:#e3e9e4}
-.typing-hint{background:#f0f5f1;border-left:4px solid #3d7c52;border-radius:8px;padding:10px 14px;margin:10px 0;line-height:1.7}
-.self-check{background:#f8faf8;border-radius:10px;padding:12px}
-.self-check-buttons{display:flex;gap:10px;flex-wrap:wrap}
-.self-check-buttons button{flex:1;min-width:180px}
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ドイツ語クエスト</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
 
-.top-menu{
-  display:flex;
-  flex-direction:column;
-  gap:16px;
-  max-width:600px;
-  margin:40px auto 0;
-}
-.top-menu-button{
-  width:100%;
-  font-size:1.15rem;
-  padding:18px 20px;
-}
+  <!-- トップページ -->
+  <section id="home" class="screen">
+    <h1>🇩🇪 ドイツ語クエスト</h1>
+
+    <div class="top-menu">
+      <button class="primary top-menu-button" onclick="openVocabulary()">
+        語彙と表現
+      </button>
+
+      <button class="primary top-menu-button" onclick="alert('動詞の活用練習は現在準備中です。')">
+        動詞の活用練習
+      </button>
+    </div>
+  </section>
+
+  <!-- 語彙と表現：課選択 -->
+  <section id="vocab" class="screen hidden">
+    <button onclick="goHome()">← トップページ</button>
+    <h1>語彙と表現</h1>
+    <div id="lesson-buttons"></div>
+  </section>
+
+  <!-- 語彙と表現：カテゴリー選択 -->
+  <section id="menu" class="screen hidden">
+    <button onclick="goVocabulary()">← 語彙と表現</button>
+    <h1 id="lesson-title"></h1>
+    <div id="category-buttons"></div>
+  </section>
+
+  <!-- 練習画面 -->
+  <section id="practice" class="screen hidden">
+    <button id="practice-back">← 練習メニュー</button>
+    <div id="progress"></div>
+    <div id="practice-content"></div>
+  </section>
+
+</main>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
