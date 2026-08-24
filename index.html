@@ -18,36 +18,112 @@
         語彙と表現
       </button>
 
-      <button class="primary top-menu-button" onclick="alert('動詞の活用練習は現在準備中です。')">
+      <button class="primary top-menu-button" onclick="openVerbPractice()">
         動詞の活用練習
       </button>
     </div>
   </section>
 
+
+  <!-- 動詞の活用練習：種類選択 -->
+  <section id="verb-menu" class="screen hidden">
+
+    <button onclick="goHome()">← トップページ</button>
+
+    <h1>動詞の活用練習</h1>
+
+    <div class="verb-menu-buttons">
+
+      <button class="primary" onclick="openVerbType('直接法現在')">
+        直接法現在
+      </button>
+
+      <button class="primary" onclick="openVerbType('三基本形')">
+        三基本形
+      </button>
+
+      <button class="primary" onclick="openVerbType('接続法Ⅱ式')">
+        接続法Ⅱ式
+      </button>
+
+      <button class="primary" onclick="alert('「全て出題」は後で機能を追加します。')">
+        全て出題
+      </button>
+
+      <button class="primary" onclick="alert('「変化表」は後で機能を追加します。')">
+        変化表
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- 動詞の活用練習：問題形式選択 -->
+  <section id="verb-types" class="screen hidden">
+
+    <button onclick="openVerbPractice()">← 動詞の活用練習</button>
+
+    <h1 id="verb-type-title"></h1>
+
+    <div class="verb-menu-buttons">
+
+      <button class="primary" onclick="alert('動詞独日カードは後で機能を追加します。')">
+        動詞独日カード
+      </button>
+
+      <button class="primary" onclick="alert('文空欄補充は後で機能を追加します。')">
+        文空欄補充
+      </button>
+
+      <button class="primary" onclick="alert('タイピングは後で機能を追加します。')">
+        タイピング
+      </button>
+
+    </div>
+
+  </section>
+
+
   <!-- 語彙と表現：課選択 -->
   <section id="vocab" class="screen hidden">
+
     <button onclick="goHome()">← トップページ</button>
+
     <h1>語彙と表現</h1>
+
     <div id="lesson-buttons"></div>
+
   </section>
+
 
   <!-- 語彙と表現：カテゴリー選択 -->
   <section id="menu" class="screen hidden">
+
     <button onclick="goVocabulary()">← 語彙と表現</button>
+
     <h1 id="lesson-title"></h1>
+
     <div id="category-buttons"></div>
+
   </section>
+
 
   <!-- 練習画面 -->
   <section id="practice" class="screen hidden">
+
     <button id="practice-back">← 練習メニュー</button>
+
     <div id="progress"></div>
+
     <div id="practice-content"></div>
+
   </section>
 
 </main>
 
 <script src="data.js"></script>
 <script src="app.js"></script>
+
 </body>
 </html>
