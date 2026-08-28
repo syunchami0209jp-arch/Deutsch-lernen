@@ -2295,3 +2295,590 @@ const lessons = [
     ]
   }
 ];
+// ========================================
+// 動詞の活用練習
+// ========================================
+
+const verbData = [
+
+  // ===== 1〜20 =====
+
+  {
+    id: 1,
+    infinitive: "befehlen",
+    meaning: "命じる",
+    present: {
+      du: "befiehlst",
+      er: "befiehlt"
+    },
+    past: "befahl",
+    konj2: "beföhle",
+    participle: "befohlen"
+  },
+
+  {
+    id: 2,
+    infinitive: "beginnen",
+    meaning: "始める",
+    present: {
+      du: "beginnst",
+      er: "beginnt"
+    },
+    past: "begann",
+    konj2: "begänne",
+    participle: "begonnen"
+  },
+
+  {
+    id: 3,
+    infinitive: "beißen",
+    meaning: "かむ",
+    present: {
+      du: "beißt",
+      er: "beißt"
+    },
+    past: "biss",
+    konj2: "bisse",
+    participle: "gebissen"
+  },
+
+  {
+    id: 4,
+    infinitive: "bergen",
+    meaning: "救出する",
+    present: {
+      du: "birgst",
+      er: "birgt"
+    },
+    past: "barg",
+    konj2: "bärge",
+    participle: "geborgen"
+  },
+
+  {
+    id: 5,
+    infinitive: "bieten",
+    meaning: "提供する",
+    present: {
+      du: "bietest",
+      er: "bietet"
+    },
+    past: "bot",
+    konj2: "böte",
+    participle: "geboten"
+  },
+
+  {
+    id: 6,
+    infinitive: "binden",
+    meaning: "結ぶ",
+    present: {
+      du: "bindest",
+      er: "bindet"
+    },
+    past: "band",
+    konj2: "bände",
+    participle: "gebunden"
+  },
+
+  {
+    id: 7,
+    infinitive: "bitten",
+    meaning: "頼む",
+    present: {
+      du: "bittest",
+      er: "bittet"
+    },
+    past: "bat",
+    konj2: "bäte",
+    participle: "gebeten"
+  },
+
+  {
+    id: 8,
+    infinitive: "blasen",
+    meaning: "吹く",
+    present: {
+      du: "bläst",
+      er: "bläst"
+    },
+    past: "blies",
+    konj2: "bliese",
+    participle: "geblasen"
+  },
+
+  {
+    id: 9,
+    infinitive: "bleiben",
+    meaning: "とどまる",
+    present: {
+      du: "bleibst",
+      er: "bleibt"
+    },
+    past: "blieb",
+    konj2: "bliebe",
+    participle: "geblieben"
+  },
+
+  {
+    id: 10,
+    infinitive: "braten",
+    meaning: "（肉を）焼く",
+    present: {
+      du: "brätst",
+      er: "brät"
+    },
+    past: "briet",
+    konj2: "briete",
+    participle: "gebraten"
+  },
+
+  {
+    id: 11,
+    infinitive: "brechen",
+    meaning: "折る",
+    present: {
+      du: "brichst",
+      er: "bricht"
+    },
+    past: "brach",
+    konj2: "bräche",
+    participle: "gebrochen"
+  },
+
+  {
+    id: 12,
+    infinitive: "brennen",
+    meaning: "燃やす・燃える",
+    present: {
+      du: "brennst",
+      er: "brennt"
+    },
+    past: "brannte",
+    konj2: "brennte",
+    participle: "gebrannt"
+  },
+
+  {
+    id: 13,
+    infinitive: "bringen",
+    meaning: "持ってくる",
+    present: {
+      du: "bringst",
+      er: "bringt"
+    },
+    past: "brachte",
+    konj2: "brächte",
+    participle: "gebracht"
+  },
+
+  {
+    id: 14,
+    infinitive: "denken",
+    meaning: "考える",
+    present: {
+      du: "denkst",
+      er: "denkt"
+    },
+    past: "dachte",
+    konj2: "dächte",
+    participle: "gedacht"
+  },
+
+  {
+    id: 15,
+    infinitive: "dringen",
+    meaning: "突き進む",
+    present: {
+      du: "dringst",
+      er: "dringt"
+    },
+    past: "drang",
+    konj2: "dränge",
+    participle: "gedrungen"
+  },
+
+  {
+    id: 16,
+    infinitive: "dürfen",
+    meaning: "…してもよい",
+    present: {
+      du: "darfst",
+      er: "darf"
+    },
+    past: "durfte",
+    konj2: "dürfte",
+    participle: "gedurft"
+  },
+
+  {
+    id: 17,
+    infinitive: "empfehlen",
+    meaning: "勧める",
+    present: {
+      du: "empfiehlst",
+      er: "empfiehlt"
+    },
+    past: "empfahl",
+    konj2: "empföhle",
+    participle: "empfohlen"
+  },
+
+  {
+    id: 18,
+    infinitive: "erschrecken",
+    meaning: "驚く",
+    present: {
+      du: "erschrickst",
+      er: "erschrickt"
+    },
+    past: "erschrak",
+    konj2: "erschräke",
+    participle: "erschrocken"
+  },
+
+  {
+    id: 19,
+    infinitive: "essen",
+    meaning: "食べる",
+    present: {
+      du: "isst",
+      er: "isst"
+    },
+    past: "aß",
+    konj2: "äße",
+    participle: "gegessen"
+  },
+
+  {
+    id: 20,
+    infinitive: "fahren",
+    meaning: "（乗物で）行く",
+    present: {
+      du: "fährst",
+      er: "fährt"
+    },
+    past: "fuhr",
+    konj2: "führe",
+    participle: "gefahren"
+  },
+
+
+  // ===== 21〜40 =====
+
+  {
+    id: 21,
+    infinitive: "fallen",
+    meaning: "落ちる",
+    present: {
+      du: "fällst",
+      er: "fällt"
+    },
+    past: "fiel",
+    konj2: "fiele",
+    participle: "gefallen"
+  },
+
+  {
+    id: 22,
+    infinitive: "fangen",
+    meaning: "捕える",
+    present: {
+      du: "fängst",
+      er: "fängt"
+    },
+    past: "fing",
+    konj2: "finge",
+    participle: "gefangen"
+  },
+
+  {
+    id: 23,
+    infinitive: "finden",
+    meaning: "見つける",
+    present: {
+      du: "findest",
+      er: "findet"
+    },
+    past: "fand",
+    konj2: "fände",
+    participle: "gefunden"
+  },
+
+  {
+    id: 24,
+    infinitive: "fliegen",
+    meaning: "飛ぶ",
+    present: {
+      du: "fliegst",
+      er: "fliegt"
+    },
+    past: "flog",
+    konj2: "flöge",
+    participle: "geflogen"
+  },
+
+  {
+    id: 25,
+    infinitive: "fliehen",
+    meaning: "逃げる",
+    present: {
+      du: "fliehst",
+      er: "flieht"
+    },
+    past: "floh",
+    konj2: "flöhe",
+    participle: "geflohen"
+  },
+
+  {
+    id: 26,
+    infinitive: "fließen",
+    meaning: "流れる",
+    present: {
+      du: "fließt",
+      er: "fließt"
+    },
+    past: "floss",
+    konj2: "flösse",
+    participle: "geflossen"
+  },
+
+  {
+    id: 27,
+    infinitive: "fressen",
+    meaning: "（動物が）食う",
+    present: {
+      du: "frisst",
+      er: "frisst"
+    },
+    past: "fraß",
+    konj2: "fräße",
+    participle: "gefressen"
+  },
+
+  {
+    id: 28,
+    infinitive: "frieren",
+    meaning: "凍える",
+    present: {
+      du: "frierst",
+      er: "friert"
+    },
+    past: "fror",
+    konj2: "fröre",
+    participle: "gefroren"
+  },
+
+  {
+    id: 29,
+    infinitive: "gebären",
+    meaning: "産む",
+    present: {
+      du: "gebärst",
+      er: "gebärt"
+    },
+    past: "gebar",
+    konj2: "gebäre",
+    participle: "geboren"
+  },
+
+  {
+    id: 30,
+    infinitive: "geben",
+    meaning: "与える",
+    present: {
+      du: "gibst",
+      er: "gibt"
+    },
+    past: "gab",
+    konj2: "gäbe",
+    participle: "gegeben"
+  },
+
+  {
+    id: 31,
+    infinitive: "gehen",
+    meaning: "行く",
+    present: {
+      du: "gehst",
+      er: "geht"
+    },
+    past: "ging",
+    konj2: "ginge",
+    participle: "gegangen"
+  },
+
+  {
+    id: 32,
+    infinitive: "gelingen",
+    meaning: "成功する",
+    present: {
+      du: "gelingst",
+      er: "gelingt"
+    },
+    past: "gelang",
+    konj2: "gelänge",
+    participle: "gelungen"
+  },
+
+  {
+    id: 33,
+    infinitive: "gelten",
+    meaning: "通用する",
+    present: {
+      du: "giltst",
+      er: "gilt"
+    },
+    past: "galt",
+    konj2: "gölte",
+    participle: "gegolten"
+  },
+
+  {
+    id: 34,
+    infinitive: "genießen",
+    meaning: "楽しむ",
+    present: {
+      du: "genießt",
+      er: "genießt"
+    },
+    past: "genoss",
+    konj2: "genösse",
+    participle: "genossen"
+  },
+
+  {
+    id: 35,
+    infinitive: "geschehen",
+    meaning: "起こる",
+    present: {
+      du: "geschiehst",
+      er: "geschieht"
+    },
+    past: "geschah",
+    konj2: "geschähe",
+    participle: "geschehen"
+  },
+
+  {
+    id: 36,
+    infinitive: "gewinnen",
+    meaning: "獲得する",
+    present: {
+      du: "gewinnst",
+      er: "gewinnt"
+    },
+    past: "gewann",
+    konj2: "gewönne",
+    participle: "gewonnen"
+  },
+
+  {
+    id: 37,
+    infinitive: "gießen",
+    meaning: "注ぐ",
+    present: {
+      du: "gießt",
+      er: "gießt"
+    },
+    past: "goss",
+    konj2: "gösse",
+    participle: "gegossen"
+  },
+
+  {
+    id: 38,
+    infinitive: "gleiten",
+    meaning: "すべる",
+    present: {
+      du: "gleitest",
+      er: "gleitet"
+    },
+    past: "glitt",
+    konj2: "glitte",
+    participle: "geglitten"
+  },
+
+  {
+    id: 39,
+    infinitive: "graben",
+    meaning: "掘る",
+    present: {
+      du: "gräbst",
+      er: "gräbt"
+    },
+    past: "grub",
+    konj2: "grübe",
+    participle: "gegraben"
+  },
+
+  {
+    id: 40,
+    infinitive: "greifen",
+    meaning: "つかむ",
+    present: {
+      du: "greifst",
+      er: "greift"
+    },
+    past: "griff",
+    konj2: "griffe",
+    participle: "gegriffen"
+  },
+
+
+  // ===== 41〜44 =====
+
+  {
+    id: 41,
+    infinitive: "haben",
+    meaning: "持っている",
+    present: {
+      du: "hast",
+      er: "hat"
+    },
+    past: "hatte",
+    konj2: "hätte",
+    participle: "gehabt"
+  },
+
+  {
+    id: 42,
+    infinitive: "halten",
+    meaning: "保つ",
+    present: {
+      du: "hältst",
+      er: "hält"
+    },
+    past: "hielt",
+    konj2: "hielte",
+    participle: "gehalten"
+  },
+
+  {
+    id: 43,
+    infinitive: "hängen",
+    meaning: "掛かっている",
+    present: {
+      du: "hängst",
+      er: "hängt"
+    },
+    past: "hing",
+    konj2: "hinge",
+    participle: "gehangen"
+  },
+
+  {
+    id: 44,
+    infinitive: "heben",
+    meaning: "持ち上げる",
+    present: {
+      du: "hebst",
+      er: "hebt"
+    },
+    past: "hob",
+    konj2: "höbe",
+    participle: "gehoben"
+  }
+
+];
