@@ -2880,5 +2880,482 @@ const verbData = [
     konj2: "höbe",
     participle: "gehoben"
   }
+// ========================================
+// 不規則動詞データ 追加分
+// ========================================
 
+{
+  id: "v041",
+  infinitive: "preisen",
+  japanese: "ほめる",
+  present: {
+    du: "preist",
+    er: "preist"
+  },
+  past: "pries",
+  konj2: "priese",
+  participle: "gepriesen"
+},
+
+{
+  id: "v042",
+  infinitive: "raten",
+  japanese: "忠告する",
+  present: {
+    du: "rätst",
+    er: "rät"
+  },
+  past: "riet",
+  konj2: "riete",
+  participle: "geraten"
+},
+
+{
+  id: "v043",
+  infinitive: "reißen",
+  japanese: "裂く",
+  present: {
+    du: "reißt",
+    er: "reißt"
+  },
+  past: "riss",
+  konj2: "risse",
+  participle: "gerissen"
+},
+
+{
+  id: "v044",
+  infinitive: "reiten",
+  japanese: "馬で行く",
+  past: "ritt",
+  konj2: "ritte",
+  participle: "geritten"
+},
+
+{
+  id: "v045",
+  infinitive: "rennen",
+  japanese: "駆ける",
+  past: "rannte",
+  konj2: "rennte",
+  participle: "gerannt"
+},
+
+{
+  id: "v046",
+  infinitive: "riechen",
+  japanese: "におう",
+  past: "roch",
+  konj2: "röche",
+  participle: "gerochen"
+},
+
+{
+  id: "v047",
+  infinitive: "rufen",
+  japanese: "呼ぶ",
+  past: "rief",
+  konj2: "riefe",
+  participle: "gerufen"
+},
+
+{
+  id: "v048",
+  infinitive: "schaffen",
+  japanese: "創造する",
+  past: "schuf",
+  konj2: "schüfe",
+  participle: "geschaffen"
+},
+
+{
+  id: "v049",
+  infinitive: "scheiden",
+  japanese: "分ける",
+  past: "schied",
+  konj2: "schiede",
+  participle: "geschieden"
+},
+
+{
+  id: "v050",
+  infinitive: "scheinen",
+  japanese: "輝く",
+  past: "schien",
+  konj2: "schiene",
+  participle: "geschienen"
+},
+
+{
+  id: "v051",
+  infinitive: "schelten",
+  japanese: "しかる",
+  present: {
+    du: "schiltst",
+    er: "schilt"
+  },
+  past: "schalt",
+  konj2: "schölte",
+  participle: "gescholten"
+},
+
+{
+  id: "v052",
+  infinitive: "schieben",
+  japanese: "押す",
+  past: "schob",
+  konj2: "schöbe",
+  participle: "geschoben"
+},
+
+{
+  id: "v053",
+  infinitive: "schießen",
+  japanese: "撃つ",
+  present: {
+    du: "schießt",
+    er: "schießt"
+  },
+  past: "schoss",
+  konj2: "schösse",
+  participle: "geschossen"
+},
+
+{
+  id: "v054",
+  infinitive: "schlafen",
+  japanese: "眠る",
+  present: {
+    du: "schläfst",
+    er: "schläft"
+  },
+  past: "schlief",
+  konj2: "schliefe",
+  participle: "geschlafen"
+},
+
+{
+  id: "v055",
+  infinitive: "schlagen",
+  japanese: "打つ",
+  present: {
+    du: "schlägst",
+    er: "schlägt"
+  },
+  past: "schlug",
+  konj2: "schlüge",
+  participle: "geschlagen"
+},
+
+{
+  id: "v056",
+  infinitive: "schleichen",
+  japanese: "忍び歩く",
+  past: "schlich",
+  konj2: "schliche",
+  participle: "geschlichen"
+},
+
+{
+  id: "v057",
+  infinitive: "schließen",
+  japanese: "閉める",
+  past: "schloss",
+  konj2: "schlösse",
+  participle: "geschlossen"
+},
+
+{
+  id: "v058",
+  infinitive: "schmelzen",
+  japanese: "溶ける",
+  present: {
+    du: "schmilzt",
+    er: "schmilzt"
+  },
+  past: "schmolz",
+  konj2: "schmölze",
+  participle: "geschmolzen"
+},
+
+{
+  id: "v059",
+  infinitive: "schneiden",
+  japanese: "切る",
+  past: "schnitt",
+  konj2: "schnitte",
+  participle: "geschnitten"
+},
+
+{
+  id: "v060",
+  infinitive: "schreiben",
+  japanese: "書く",
+  past: "schrieb",
+  konj2: "schriebe",
+  participle: "geschrieben"
+},
+
+{
+  id: "v061",
+  infinitive: "schreien",
+  japanese: "叫ぶ",
+  past: "schrie",
+  konj2: "schriee",
+  participle: "geschrien"
+},
+
+{
+  id: "v062",
+  infinitive: "schreiten",
+  japanese: "歩く",
+  past: "schritt",
+  konj2: "schritte",
+  participle: "geschritten"
+},
+
+{
+  id: "v063",
+  infinitive: "schweigen",
+  japanese: "黙っている",
+  past: "schwieg",
+  konj2: "schwiege",
+  participle: "geschwiegen"
+},
+
+{
+  id: "v064",
+  infinitive: "heißen",
+  japanese: "…という名である",
+  present: {
+    du: "heißt",
+    er: "heißt"
+  },
+  past: "hieß",
+  konj2: "hieße",
+  participle: "geheißen"
+},
+
+{
+  id: "v065",
+  infinitive: "helfen",
+  japanese: "助ける",
+  present: {
+    du: "hilfst",
+    er: "hilft"
+  },
+  past: "half",
+  konj2: "hülfe",
+  participle: "geholfen"
+},
+
+{
+  id: "v066",
+  infinitive: "kennen",
+  japanese: "知っている",
+  past: "kannte",
+  konj2: "kennte",
+  participle: "gekannt"
+},
+
+{
+  id: "v067",
+  infinitive: "klingen",
+  japanese: "鳴る",
+  past: "klang",
+  konj2: "klänge",
+  participle: "geklungen"
+},
+
+{
+  id: "v068",
+  infinitive: "kommen",
+  japanese: "来る",
+  past: "kam",
+  konj2: "käme",
+  participle: "gekommen"
+},
+
+{
+  id: "v069",
+  infinitive: "können",
+  japanese: "…できる",
+  present: {
+    ich: "kann",
+    du: "kannst",
+    er: "kann"
+  },
+  past: "konnte",
+  konj2: "könnte",
+  participle: "gekonnt"
+},
+
+{
+  id: "v070",
+  infinitive: "kriechen",
+  japanese: "はう",
+  past: "kroch",
+  konj2: "kröche",
+  participle: "gekrochen"
+},
+
+{
+  id: "v071",
+  infinitive: "laden",
+  japanese: "積み込む",
+  present: {
+    du: "lädst",
+    er: "lädt"
+  },
+  past: "lud",
+  konj2: "lüde",
+  participle: "geladen"
+},
+
+{
+  id: "v072",
+  infinitive: "lassen",
+  japanese: "…させる",
+  present: {
+    du: "lässt",
+    er: "lässt"
+  },
+  past: "ließ",
+  konj2: "ließe",
+  participle: "gelassen"
+},
+
+{
+  id: "v073",
+  infinitive: "laufen",
+  japanese: "走る",
+  present: {
+    du: "läufst",
+    er: "läuft"
+  },
+  past: "lief",
+  konj2: "liefe",
+  participle: "gelaufen"
+},
+
+{
+  id: "v074",
+  infinitive: "leiden",
+  japanese: "苦しむ",
+  past: "litt",
+  konj2: "litte",
+  participle: "gelitten"
+},
+
+{
+  id: "v075",
+  infinitive: "leihen",
+  japanese: "貸す",
+  past: "lieh",
+  konj2: "liehe",
+  participle: "geliehen"
+},
+
+{
+  id: "v076",
+  infinitive: "lesen",
+  japanese: "読む",
+  present: {
+    du: "liest",
+    er: "liest"
+  },
+  past: "las",
+  konj2: "läse",
+  participle: "gelesen"
+},
+
+{
+  id: "v077",
+  infinitive: "liegen",
+  japanese: "横たわっている",
+  past: "lag",
+  konj2: "läge",
+  participle: "gelegen"
+},
+
+{
+  id: "v078",
+  infinitive: "lügen",
+  japanese: "うそをつく",
+  past: "log",
+  konj2: "löge",
+  participle: "gelogen"
+},
+
+{
+  id: "v079",
+  infinitive: "meiden",
+  japanese: "避ける",
+  past: "mied",
+  konj2: "miede",
+  participle: "gemieden"
+},
+
+{
+  id: "v080",
+  infinitive: "messen",
+  japanese: "測る",
+  present: {
+    du: "misst",
+    er: "misst"
+  },
+  past: "maß",
+  konj2: "mäße",
+  participle: "gemessen"
+},
+
+{
+  id: "v081",
+  infinitive: "mögen",
+  japanese: "…だろう、好きだ",
+  present: {
+    ich: "mag",
+    du: "magst",
+    er: "mag"
+  },
+  past: "mochte",
+  konj2: "möchte",
+  participle: "gemocht"
+},
+
+{
+  id: "v082",
+  infinitive: "müssen",
+  japanese: "…しなければならない",
+  present: {
+    ich: "muss",
+    du: "musst",
+    er: "muss"
+  },
+  past: "musste",
+  konj2: "müsste",
+  participle: "gemusst"
+},
+
+{
+  id: "v083",
+  infinitive: "nehmen",
+  japanese: "取る",
+  present: {
+    du: "nimmst",
+    er: "nimmt"
+  },
+  past: "nahm",
+  konj2: "nähme",
+  participle: "genommen"
+},
+
+{
+  id: "v084",
+  infinitive: "nennen",
+  japanese: "名づける",
+  past: "nannte",
+  konj2: "nennte",
+  participle: "genannt"
+},
 ];
