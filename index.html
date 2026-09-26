@@ -14,116 +14,75 @@
     <h1>🇩🇪 ドイツ語クエスト</h1>
 
     <div class="top-menu">
-      <button class="primary top-menu-button" onclick="openVocabulary()">
-        語彙と表現
-      </button>
-
-      <button class="primary top-menu-button" onclick="openVerbPractice()">
-        動詞の活用練習
-      </button>
+      <button class="primary top-menu-button" onclick="openVocabulary()">語彙と表現</button>
+      <button class="primary top-menu-button" onclick="openVerbPractice()">動詞の活用練習</button>
     </div>
   </section>
-
 
   <!-- 動詞の活用練習：種類選択 -->
   <section id="verb-menu" class="screen hidden">
-
     <button onclick="goHome()">← トップページ</button>
-
     <h1>動詞の活用練習</h1>
-
     <div class="verb-menu-buttons">
-
-      <button class="primary" onclick="openVerbType('直接法現在')">
-        直接法現在
-      </button>
-
-      <button class="primary" onclick="openVerbType('三基本形')">
-        三基本形
-      </button>
-
-      <button class="primary" onclick="openVerbType('接続法Ⅱ式')">
-        接続法Ⅱ式
-      </button>
-
-      <button class="primary" onclick="alert('「全て出題」は後で機能を追加します。')">
-        全て出題
-      </button>
-
-      <button class="primary" onclick="alert('「変化表」は後で機能を追加します。')">
-        変化表
-      </button>
-
+      <button class="primary" onclick="openVerbType('present')">直接法現在</button>
+      <button class="primary" onclick="openVerbType('three')">三基本形</button>
+      <button class="primary" onclick="openVerbType('subj2')">接続法Ⅱ式</button>
+      <button class="primary" onclick="openVerbAll()">全て出題</button>
+      <button class="primary" onclick="openVerbTable()">変化表</button>
     </div>
-
   </section>
-
 
   <!-- 動詞の活用練習：問題形式選択 -->
   <section id="verb-types" class="screen hidden">
-
     <button onclick="openVerbPractice()">← 動詞の活用練習</button>
-
     <h1 id="verb-type-title"></h1>
-
     <div class="verb-menu-buttons">
-
-      <button class="primary" onclick="alert('動詞独日カードは後で機能を追加します。')">
-        動詞独日カード
-      </button>
-
-      <button class="primary" onclick="alert('文空欄補充は後で機能を追加します。')">
-        文空欄補充
-      </button>
-
-      <button class="primary" onclick="alert('タイピングは後で機能を追加します。')">
-        タイピング
-      </button>
-
+      <button class="primary" onclick="startVerbPractice('card')">① 動詞独日カード</button>
+      <button class="primary" onclick="startVerbPractice('blank')">② 文空欄補充</button>
+      <button class="primary" onclick="startVerbPractice('typing')">③ タイピング</button>
     </div>
-
   </section>
 
+  <!-- 動詞：問題画面 -->
+  <section id="verb-practice" class="screen hidden">
+    <button onclick="openVerbType(verbMode)">← 練習メニュー</button>
+    <div id="verb-progress"></div>
+    <div id="verb-practice-content"></div>
+  </section>
+
+  <!-- 動詞：変化表 -->
+  <section id="verb-table" class="screen hidden">
+    <button onclick="openVerbPractice()">← 動詞の活用練習</button>
+    <h1>動詞の変化表</h1>
+    <p class="small">写真のリストにある動詞をまとめています。横にスクロールできます。</p>
+    <div id="verb-table-content"></div>
+  </section>
 
   <!-- 語彙と表現：課選択 -->
   <section id="vocab" class="screen hidden">
-
     <button onclick="goHome()">← トップページ</button>
-
     <h1>語彙と表現</h1>
-
     <div id="lesson-buttons"></div>
-
   </section>
-
 
   <!-- 語彙と表現：カテゴリー選択 -->
   <section id="menu" class="screen hidden">
-
     <button onclick="goVocabulary()">← 語彙と表現</button>
-
     <h1 id="lesson-title"></h1>
-
     <div id="category-buttons"></div>
-
   </section>
 
-
-  <!-- 練習画面 -->
+  <!-- 語彙：練習画面 -->
   <section id="practice" class="screen hidden">
-
     <button id="practice-back">← 練習メニュー</button>
-
     <div id="progress"></div>
-
     <div id="practice-content"></div>
-
   </section>
 
 </main>
 
 <script src="data.js"></script>
 <script src="app.js"></script>
-
+<script src="verbs.js"></script>
 </body>
 </html>
